@@ -87,4 +87,15 @@ $(function() {
 		$('.cases-slider__img').addClass('slide'+nextSlide);
 	});
 
+	$('.service-slider').slick({
+		arrow: true,
+		appendArrows: $('.service-arrow')
+	});
+
+	$('.service-item-list li').click(function(){
+		var numb = $(this).data('slide');
+		$('.service-slider').slick('slickGoTo', numb);
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+
 });

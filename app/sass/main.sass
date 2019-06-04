@@ -252,18 +252,17 @@ button
 
 .strategy
 	padding: $gutter*2
-	background-color: $accent
+	background-color: #000
+	color: #fff
 	&-ttl
 		font-family: $bold
 		font-size: 100px
 		line-height: 1.1
 		text-transform: uppercase
-		color: #000
 		margin-bottom: $gutter*2
 	&-subttl
 		font-family: $semi
 		font-size: 28px
-		color: #000
 		margin-bottom: $gutter*2
 	&-txt
 		font-family: $semi
@@ -276,73 +275,166 @@ button
 		margin-bottom: $gutter
 		overflow: hidden
 		&__item
-			width: 50%
-			float: left
 			position: relative
 			font-size: 20px
 			padding: 10px 20px
 			margin-bottom: $gutter
-			color: #212529
 			&.last-xl
 				margin-bottom: 0
-			i
-				display: block
-				width: 50px
-				height: 50px
-				position: absolute
-				top: 0
-				left: 0
-				border: 1px solid #212529
-				border-right: none
-				border-bottom: none
-				&:before
-					content: ''
-					width: 1px
-					height: 10px
-					background-color: #212529
-					position: absolute
-					top: 0
-					right: 0
-				&:after
-					content: ''
-					height: 1px
-					width: 10px
-					background-color: #212529
-					position: absolute
-					bottom: 0
-					left: 0
 	&-btn
+		display: table
+		font-family: $semi
+		font-size: 20px
+		padding: 12px 40px
+		background-color: transparent
+		border: 1px solid $accent
+		color: #fff
+
+.service
+	margin: 100px 0
+	&-item
 		position: relative
-		top: 0
-		transition: all ease .3s
-		display: block
-		max-width: 290px
-		background-color: #fff
-		padding: 15px 10px
-		font-family: $bold
-		font-size: 24px
-		text-align: center
-		color: #1f1f1f
-		border-radius: 8px
-		border-bottom: 5px solid darken(#fff, 15%)
-		span
-			display: block
-			font-size: 12px
-		i
-			display: block
-			width: 30px
-			height: 30px
-			background-image: url(../img/right-arrow_btn.svg)
-			background-size: cover
+		background-color: $accent
+		padding: 40px
+		&:before
+			content: ''
+			width: 100px
+			height: 100%
+			background-color: $accent
 			position: absolute
-			top: 16px
-			left: 20px
-			transition: all ease .3s
-		&:hover
-			border-bottom-color: transparent
-			top: 5px
-			i
-				left: 50px
+			right: -100px
+			top: 0
+		&-list
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			li
+				font-family: $bold
+				font-size: 24px
+				padding: 5px 0 5px 40px
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+				&.active
+					color: #e4e4e4
+	&-ttl
+		display: table
+		font-family: $bold
+		font-size: 100px
+		line-height: 1.1
+		text-transform: uppercase
+		color: #000
+		position: relative
+		margin-bottom: 40px
+		&:before
+			content: '&'
+			font-size: 200px
+			line-height: 1
+			position: absolute
+			right: 0
+			bottom: 0
+			color: #d4d4d4
+			z-index: -1
+	&-slider
+		background-color: #000
+		padding: 40px 80px
+		color: #fff
+		&-slide
+			&__ttl
+				font-family: $bold
+				font-size: 32px
+				margin-bottom: $gutter
+			&__txt
+				font-size: 14px
+				margin-bottom: $gutter
+			&__price
+				font-family: $semi
+				font-size: 24px
+				margin-bottom: $gutter
+			&__btn
+				display: table
+				font-family: $semi
+				font-size: 18px
+				padding: 8px 16px
+				background-color: transparent
+				border: 1px solid $accent
+				color: #fff
+	&-arrow
+		position: absolute
+		right: -20px
+		bottom: -50px
+		.slick-arrow
+				background-color: #d4d4d4
+				&.slick-prev
+					background-image: url(../img/left-arrow_black.svg)
+				&.slick-next
+					background-image: url(../img/right-arrow_black.svg)
+
+.result
+	padding: $gutter*2
+	background-color: #000
+	color: #fff
+	&-ttl
+		font-family: $bold
+		font-size: 100px
+		line-height: 1.1
+		text-transform: uppercase
+		margin-bottom: $gutter*2
+	&-subttl
+		font-family: $semi
+		font-size: 28px
+		margin-bottom: $gutter*2
+	&-txt
+		font-family: $semi
+		font-size: 20px
+		text-transform: uppercase
+		margin-bottom: $gutter
+	&-list
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: $gutter
+		overflow: hidden
+		&__item
+			position: relative
+			font-size: 20px
+			padding: 10px 20px
+			margin-bottom: $gutter
+			&.last-xl
+				margin-bottom: 0
+	&-btn
+		display: table
+		font-family: $semi
+		font-size: 20px
+		padding: 12px 40px
+		background-color: transparent
+		border: 1px solid $accent
+		color: #fff
+
+.foot
+	padding: $gutter*2
+	color: #000
+	&-ttl
+		font-family: $bold
+		font-size: 100px
+		line-height: 1.1
+		text-transform: uppercase
+		margin-bottom: $gutter*2
+	&-block
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+		&__ttl
+			font-family: $semi
+			font-size: 20px
+			margin-bottom: 10px
+		&__txt
+			display: block
+			color: #000
+			font-size: 18px
+	&-cprt
+		text-align: center
+		font-size: 14px
+		margin-top: 20px
 
 
 @import "media" // Always at the end

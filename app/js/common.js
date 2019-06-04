@@ -80,7 +80,9 @@ $(function() {
 		e.preventDefault();
 	});
 
-	$('.cases-slider').slick();
+	$('.cases-slider').slick({
+		fade: true
+	});
 
 	$('.cases-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 		$('.cases-slider__img').removeClass('slide'+currentSlide)
@@ -89,13 +91,20 @@ $(function() {
 
 	$('.service-slider').slick({
 		arrow: true,
-		appendArrows: $('.service-arrow')
+		appendArrows: $('.service-arrow'),
+		adaptiveHeight: true
 	});
 
 	$('.service-item-list li').click(function(){
 		var numb = $(this).data('slide');
 		$('.service-slider').slick('slickGoTo', numb);
 		$(this).addClass('active').siblings().removeClass('active');
+	});
+
+	$('.service-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$('.service-item-list li').removeClass('active');
+		var curent = $('.service-item-list').find('.slide'+nextSlide);
+		curent.addClass('active');
 	});
 
 });

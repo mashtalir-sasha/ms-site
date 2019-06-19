@@ -180,7 +180,7 @@ label.error { display: none !important; }
 .arcticmodal-container { -webkit-overflow-scrolling: touch; overflow-y: scroll; }
 
 @media screen and (max-width: 767px) { .header-line .form-container { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
-  .header-line__logo { margin: 0 0 15px; }
+  .header-line__logo { margin: 0; }
   .btn-next { margin: 0; }
   .step { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .step-slide__title { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }

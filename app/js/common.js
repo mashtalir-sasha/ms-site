@@ -53,7 +53,8 @@ $(function() {
 	});
 
 	$('.cases-slider').slick({
-		fade: true
+		fade: true,
+		adaptiveHeight: true
 	});
 
 	$('.cases-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){

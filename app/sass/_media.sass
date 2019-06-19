@@ -7,12 +7,181 @@
 
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
+	.result
+		&-info
+			&__ttl
+				font-size: 66px
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.mob-menu
+		position: fixed
+		top: 0
+		right: 0
+		width: 0%
+		height: 100%
+		background-color: rgba(#000, .95)
+		z-index: 10
+		display: flex
+		overflow: hidden
+		transition: all ease .3s
+		&.show
+			width: 100%
+			transition: all ease .3s
+		&__close
+			font-size: 14px
+			color: #fff
+			text-align: center
+			padding: 20px 0
+		&__flex
+			width: 100%
+			height: calc(100% - 57px)
+			display: flex
+		&__content
+			margin: auto
+	.nav-list
+		float: none
+		&__item
+			text-align: center
+			display: block
+			a
+				font-size: 16px
+				padding: 15px
+	.cases
+		&-ttl
+			text-align: left
+		&-slider
+			left: inherit
+			top: inherit
+			margin: 20px auto
+			&__img
+				position: relative
+				top: inherit
+				right: inherit
+				width: 100%
+				min-height: 400px
+	.strategy
+		padding-bottom: 0
+		&-subttl
+			text-align: center
+		&-block
+			margin: 0 auto
+		&__bg
+			position: relative
+			top: inherit
+			left: inherit
+			width: 100%
+			height: inherit
+			margin-top: 40px
+	.service
+		&-ttl
+			margin-bottom: 60px
+		&-item
+			&:before
+				display: none
+		&-arrow
+			right: 0
+			bottom: 0
+			z-index: 2
+	.result
+		.container
+			&:before, &:after
+				display: none
+		&-info
+			background-color: #fff
+		&-block
+			max-width: inherit
+			background-color: #000
+	.important
+		&__txt
+			text-align: center
+		&__subttl
+			text-align: center
+		&__price
+			margin-bottom: 40px
+			text-align: center
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
+	.header
+		&__ttl
+			padding: 0
+			font-size: 140px
+			span
+				font-size: 100px
+	.foot
+		&__ttl
+			margin-bottom: 40px
+		.col-md-4
+			margin-bottom: 20px
+			&:last-child
+				margin-bottom: 0
+		&-cprt
+			margin-top: 40px
 
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
+	.header
+		&__ttl
+			font-size: 96px
+			span
+				font-size: 66px
+		&:before
+			background-image: url(../img/header_pattern_xs.png)
+	.second
+		&-block
+			&__wrap
+				&:before, &:after
+					display: none
+	.cases
+		&-ttl
+			font-size: 74px
+		&-slider
+			padding: 40px 20px
+	.strategy
+		&-ttl
+			font-size: 60px
+	.service
+		&-ttl
+			font-size: 74px
+			&:before
+				font-size: 150px
+		&-item
+			padding: 40px 20px 60px
+			&-list
+				li
+					font-size: 18px
+		&-arrow
+			.slick-arrow
+				height: 50px
+		&-slider
+			padding: 40px 20px
+			&-slide
+				&__ttl
+					font-size: 26px
+				&__btn
+					p
+						font-size: 16px
+						padding: 12px 20px
+					i
+						left: 15px
+						&:after
+							top: 37%
+							height: 30%
+	.result
+		&-info
+			padding: 40px 20px
+			&__ttl
+				font-size: 50px
+			&__subtl
+				font-size: 22px
+		&-block
+			&__bottom
+				display: none
+			&__border
+				border-bottom: none
+	.foot
+		&__ttl
+			font-size: 60px
+	.modal
+		padding: 30px

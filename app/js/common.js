@@ -7,43 +7,17 @@ $(function() {
 	$('.anchor').bind("click", function(e){
 		var anchor = $(this);
 		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top-106 // отступ от меню
+			scrollTop: $(anchor.attr('href')).offset().top-0 // отступ от меню
 		}, 500);
 	e.preventDefault();
 	});
 
-	// Меню при скроле
-	$(window).scroll(function(){
-		var topline = $(window).scrollTop();
-		if ( topline > 650 ) {
-			$(".posf").addClass('show');
-		} else {
-			$(".posf").removeClass('show');
-		};
-	});
-
 	// Клик по гамбургеру на моб версии
-	$('.mob-mnu__humb').click(function() {
-		$('.mob-mnu-list').toggleClass('show');
+	$('.mob-menu__link').click(function() {
+		$('.mob-menu').toggleClass('show');
 	});
-	$('.mob-mnu__li').click(function() {
-		$('.mob-mnu-list').removeClass('show');
-	});
-
-	// Формирование полей и заголовков формы в мод окне
-	$('.modal').click(function(){
-		var ttl = $(this).data('title');
-		var subTtl = $(this).data('subtitle');
-		var text = $(this).data('text');
-		var btn = $(this).data('btn');
-		var goal = $(this).data('goal');
-		var subject = $(this).data('subject');
-		$('.ttl').html(ttl);
-		$('.subTtl').html(subTtl);
-		$('.text').html(text);
-		$('.btn').html(btn);
-		$('.goal').val(goal);
-		$('.subject').val(subject);
+	$('.mob-menu .nav-list__item a, .mob-menu__close').click(function() {
+		$('.mob-menu').removeClass('show');
 	});
 
 	// Отправка формы
@@ -67,17 +41,15 @@ $(function() {
 	});
 
 	// Инит фансибокса
-	$('.fancybox, .modal').fancybox({
+	$('.fancybox').fancybox({
 		margin: 0,
-		padding: 0
+		padding: 0,
+		touch: false
 	});
 
-	//Якорь наверх
-	$("[href='#top']").click(function(e){
-		$('html, body').stop().animate({
-			scrollTop: $('#top').offset().top
-		}, 300);
-		e.preventDefault();
+	$('.service-slider-slide__btn').click(function() {
+		var title = $(this).parent().find('.service-slider-slide__ttl').html();
+		$('#modal input[name=subttl]').val(title);
 	});
 
 	$('.cases-slider').slick({

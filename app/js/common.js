@@ -80,4 +80,24 @@ $(function() {
 		curent.addClass('active');
 	});
 
+	$(".scroll").each(function () {
+		var block = $(this);
+		$(window).scroll(function() {
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				var top = block.offset().top-500;
+			} else {
+				var top = block.offset().top+500;
+			}
+			var bottom = block.height()+top;
+			top = top - $(window).height();
+			var scroll_top = $(this).scrollTop();
+			if ((scroll_top > top) && (scroll_top < bottom)) {
+				if (!block.hasClass("animated")) {
+					block.addClass("animated");
+					block.trigger('animatedIn');
+				}
+			}
+		});
+	});
+
 });
